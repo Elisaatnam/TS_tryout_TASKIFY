@@ -1,13 +1,14 @@
 import { useState } from "react";
 import InputField from "./component/InputField";
 import { Todo } from "./utils/model";
+import TodoList from "./component/TodoList";
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
 
   return (
-    <main className="font-sans w-screen h-screen flex flex-col items-center">
+    <main className="font-sans w-screen min-h-screen flex flex-col items-center bg-base-100">
       <h1 className=" text-3xl uppercase my-8 z-10">Taskify</h1>
       <InputField
         todo={todo}
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         todos={todos}
         setTodos={setTodos}
       />
+      <TodoList todos={todos} />
     </main>
   );
 };

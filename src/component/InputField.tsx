@@ -19,7 +19,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, todos, setTodos }) => {
   };
 
   return (
-    <form className="" onSubmit={addTodo}>
+    <form onSubmit={(e) => addTodo(e)} className="bg-base-100">
       <input
         type="text"
         placeholder="Enter task"
