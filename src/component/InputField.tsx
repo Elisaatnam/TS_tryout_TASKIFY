@@ -19,7 +19,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, todos, setTodos }) => {
   };
 
   return (
-    <form onSubmit={(e) => addTodo(e)} className="bg-base-100">
+    <form onSubmit={(e) => addTodo(e)} className="mb-6">
       <input
         type="text"
         placeholder="Enter task"
@@ -29,7 +29,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, todos, setTodos }) => {
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />
-      <button className="btn btn-neutral">Add task</button>
+      <button className="btn btn-secondary">Add task</button>
     </form>
   );
 };

@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
   return (
-    <main className="font-sans w-screen min-h-screen flex flex-col items-center bg-base-100">
+    <main className="font-sans w-screen min-h-screen flex flex-col items-center">
       <h1 className=" text-3xl uppercase my-8 z-10">Taskify</h1>
       <InputField
         todo={todo}
@@ -16,7 +16,7 @@ const App: React.FC = () => {
         todos={todos}
         setTodos={setTodos}
       />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </main>
   );
 };
