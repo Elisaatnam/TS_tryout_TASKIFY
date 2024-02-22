@@ -6,6 +6,7 @@ import TodoList from "./component/TodoList";
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
+  const [completetTodos, setCompletedTodos] = useState<Todo[]>([]);
 
   return (
     <main className="font-sans w-screen min-h-screen flex flex-col items-center">
@@ -16,7 +17,12 @@ const App: React.FC = () => {
         todos={todos}
         setTodos={setTodos}
       />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <TodoList
+        todos={todos}
+        setTodos={setTodos}
+        completedTodos={completetTodos}
+        setCompletedTodos={setCompletedTodos}
+      />
     </main>
   );
 };

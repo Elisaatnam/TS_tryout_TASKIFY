@@ -35,7 +35,7 @@ const TodoItem: React.FC<Props> = ({ todo, todos, setTodos }) => {
   };
 
   return (
-    <div className="card w-96 bg-primary text-primary-content mb-3 relativ lg:m-3">
+    <div className="card w-96 bg-primary text-primary-content mb-3 relativ lg:m-3 hover:scale-105 transition-all">
       <RiDeleteBin6Line
         onClick={() => handleDelete(todo.id)}
         className="absolute top-4 right-4"
